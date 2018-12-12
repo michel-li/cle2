@@ -8,7 +8,7 @@ body{
 /* Global */
 .container{
     width:80%;
-    margin:auto;
+    margin:0 auto;
     overflow:hidden;
 }
 
@@ -31,6 +31,7 @@ header a{
     text-decoration:none;
     text-transform: uppercase;
     font-size:16px;
+    transition: all 0.3s ease-in-out;
 }
 
 header li{
@@ -59,8 +60,30 @@ header .highlight, header .current a{
 
 header a:hover{
     color:#cccccc;
-    font-weight:bold;
+    transition: all 0.3s ease-in-out;
 }
+
+/* showcase */
+#showcase{
+    min-height:250px;
+   /* background:url('../img/schaar.jpg') no-repeat -120px -350px; */
+    text-align:center;
+    color:#797575;
+}
+
+#showcase .container {
+    width:100%;
+    position: absolute;
+    padding-top:20px;
+}
+
+#showcase .container .inner-container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+
 
 
 
