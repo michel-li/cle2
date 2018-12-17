@@ -6,7 +6,7 @@
         <meta name="description" content="De kapperszaak waar je haar geknipt moet worden">
         <meta name="keywords" content="haar, kapper, Antoinette, professioneel">
         <meta name="author" content="Michel Li">
-        <title>Alexandra's Haarmode</title>
+        <title>Alexandra's Haarmode | Home</title>
         <link rel="stylesheet" href="./css/style2.css">
         <link rel="stylesheet" href="./css/animate.css">
         <link rel="icon" type="image/png" href="./img/logo_alexandra.png">
