@@ -13,13 +13,13 @@
     </head>
     <body>
         <header>
-            <div class="container bounce animated">
+            <div class="container">
                 <div id="branding">
                     <h1><span class="highlight">Alexandra's</span> Haarmode</h1>
                 </div>
                 <nav>
                     <ul>
-                        <li class="current"><a href="index.html">Home</a></li>
+                        <li class="current"><a href="index.php">Home</a></li>
                         <li><a href="over ons.php">Over ons</a></li>
                         <li><a href="locatie.php">Locatie</a></li>
                         <li><a href="Afspraak maken.php">Afspraak maken</a></li>
