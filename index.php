@@ -20,10 +20,10 @@
                 <nav>
                     <ul>
                         <li class="current"><a href="index.html">Home</a></li>
-                        <li><a href="over ons.html">Over ons</a></li>
-                        <li><a href="locatie.html">Locatie</a></li>
-                        <li><a href="Afspraak maken.html">Afspraak maken</a></li>
-                        <li><a href="Vacature.html">Vacature</a></li>
+                        <li><a href="over ons.php">Over ons</a></li>
+                        <li><a href="locatie.php">Locatie</a></li>
+                        <li><a href="Afspraak maken.php">Afspraak maken</a></li>
+                        <li><a href="Vacature.php">Vacature</a></li>
                     </ul>
                 </nav>
             </div>
