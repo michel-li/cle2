@@ -7,7 +7,7 @@
         <meta name="keywords" content="haar, kapper, Antoinette, professioneel">
         <meta name="author" content="Michel Li">
         <title>Alexandra's Haarmode</title>
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/style2.css">
         <link rel="stylesheet" href="./css/animate.css">
         <link rel="icon" type="image/png" href="./img/logo_alexandra.png">
     </head>
@@ -22,8 +22,8 @@
                         <li class="current"><a href="index.php">Home</a></li>
                         <li><a href="over ons.php">Over ons</a></li>
                         <li><a href="locatie.php">Locatie</a></li>
-                        <li><a href="Afspraak maken.php">Afspraak maken</a></li>
-                        <li><a href="Vacature.php">Vacature</a></li>
+                        <li><a href="afspraak maken.php">Afspraak maken</a></li>
+                        <li><a href="vacature.php">Vacature</a></li>
                     </ul>
                 </nav>
             </div>

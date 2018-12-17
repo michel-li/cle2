@@ -66,12 +66,12 @@ header a:hover{
 /* showcase */
 #showcase{
     min-height:250px;
-    /* background:url('../img/schaar.jpg') no-repeat -120px -350px; */
+    background:url('../img/schaar.jpg') no-repeat -120px -350px;
     text-align:center;
     color:#797575;
 }
 
-/* #showcase .container {
+ /* #showcase .container {
     width:100%;
     position: absolute;
     padding-top:20px;
@@ -107,6 +107,36 @@ header a:hover{
     margin-top:15px;
 }
 
+#newsletter input[type="email"]{
+    padding:4px;
+    height:25px;
+    width:250px;
+}
+
+/* Boxes */
+#boxes{
+    margin-top:20px;
+}
+
+#boxes .box{
+    float:left;
+    text-align:center;
+    width:30%;
+    padding:10px;
+}
+
+#boxes .box img{
+    width:135px;
+    height:135px;
+}
+
+footer{
+    padding:20px;
+    margin-top:20px;
+    color:#ffffff;
+    background-color:#e8491d;
+    text-align:center;
+}
 
 
 
