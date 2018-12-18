@@ -7,7 +7,7 @@
         <meta name="keywords" content="haar, kapper, Antoinette, professioneel">
         <meta name="author" content="Michel Li">
         <title>Alexandra's Haarmode | Home</title>
-        <link rel="stylesheet" href="./css/style2.css">
+        <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/animate.css">
         <link rel="icon" type="image/png" href="./img/logo_alexandra.png">
     </head>

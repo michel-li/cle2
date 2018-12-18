@@ -7,7 +7,7 @@
     <meta name="keywords" content="haar, kapper, Antoinette, professioneel">
     <meta name="author" content="Michel Li">
     <title>Alexandra's Haarmode | Over ons</title>
-    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/animate.css">
     <link rel="icon" type="image/png" href="./img/logo_alexandra.png">
 </head>
@@ -46,14 +46,16 @@
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec ornare turpis, ut congue turpis. Suspendisse placerat, nibh vitae volutpat laoreet, leo ipsum mollis velit, eu pellentesque risus dolor non dolor. Pellentesque vel libero sed dolor imperdiet gravida. Vivamus auctor hendrerit mi sed varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies blandit sem, eget elementum neque finibus et. Phasellus risus neque, mattis eget dolor a, egestas auctor mi.
             </p>
-            <p>
+            <p class="dark">
                 Nulla risus tellus, accumsan id odio eu, finibus sagittis magna. Nunc ullamcorper egestas diam, in posuere nisl posuere vitae. In at velit ultrices, pretium felis sit amet, varius nunc. Suspendisse maximus, lectus euismod accumsan sollicitudin, sem augue eleifend tortor, sit amet aliquam nulla urna a ante. In euismod consectetur nunc fermentum pharetra. Sed pellentesque turpis erat, ac sodales nisl consectetur et. Mauris porta nisi id neque pellentesque, at ornare ligula lobortis. Suspendisse vel dui quis elit fringilla tempus sit amet vel tellus. Donec malesuada urna vitae mi condimentum, nec rutrum ligula eleifend. Mauris porttitor vel neque eu viverra.
             </p>
         </article>
 
         <aside id="sidebar">
+            <div class="dark">
             <h3>Wat wij doen</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec ornare turpis, ut congue turpis. Suspendisse placerat, nibh vitae volutpat laoreet, leo ipsum mollis velit, eu pellentesque risus dolor non dolor. Pellentesque vel libero sed dolor imperdiet gravida. Vivamus auctor hendrerit mi sed varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies blandit sem, eget elementum neque finibus et. Phasellus risus neque, mattis eget dolor a, egestas auctor mi.</p>
+            </div>
         </aside>
     </div>
 </section>
