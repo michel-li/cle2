@@ -68,6 +68,7 @@
             </div>
         </section>
 
+
         <footer>
             <p>Alexandra's Haarmode, Copyright &copy; 2018</p>
         </footer>
