@@ -44,7 +44,9 @@
         <article id="main-col">
             <h1 class="page-title">Locatie</h1>
                 <p>Hier ziet u de locatie van Alexandra Haarmode</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2462.2369784967436!2d4.160261315513573!3d51.89313929024715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c45277d77f7f7b%3A0x89da9c79b5a9622b!2sAlexandra+Haarmode!5e0!3m2!1snl!2snl!4v1545211752899" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <div class="resp-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2462.2369784967436!2d4.160261315513573!3d51.89313929024715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c45277d77f7f7b%3A0x89da9c79b5a9622b!2sAlexandra+Haarmode!5e0!3m2!1snl!2snl!4v1545211752899" width="500" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
         </article>
 
         <aside id="sidebar">
