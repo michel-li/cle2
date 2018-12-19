@@ -1,9 +1,5 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
-<html>
+<html lang="nl">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
@@ -45,12 +41,11 @@
 
         <section id="main">
             <div class="container">
-                <article id="main-col">
-                    <h1 class="page-title">Afspraak Maken</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec ornare turpis, ut congue turpis. Suspendisse placerat, nibh vitae volutpat laoreet, leo ipsum mollis velit, eu pellentesque risus dolor non dolor. Pellentesque vel libero sed dolor imperdiet gravida. Vivamus auctor hendrerit mi sed varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies blandit sem, eget elementum neque finibus et. Phasellus risus neque, mattis eget dolor a, egestas auctor mi.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec ornare turpis, ut congue turpis. Suspendisse placerat, nibh vitae volutpat laoreet, leo ipsum mollis velit, eu pellentesque risus dolor non dolor. Pellentesque vel libero sed dolor imperdiet gravida. Vivamus auctor hendrerit mi sed varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies blandit sem, eget elementum neque finibus et. Phasellus risus neque, mattis eget dolor a, egestas auctor mi.</p>
-
-                </article>
+                <h1 class="page-title">Afspraak Maken</h1>
+                <button class="collapsible">Behandeling</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
 
                 <aside id="sidebar">
                     <div class="dark">
@@ -64,5 +59,22 @@
         <footer>
             <p>Alexandra's Haarmode, Copyright &copy; 2018</p>
         </footer>
+
+        <script>
+            let coll = document.getElementsByClassName("collapsible");
+            let i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    let content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        </script>
     </body>
 </html>
