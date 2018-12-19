@@ -47,6 +47,8 @@
     <div class="container">
         <article id="main-col">
             <h1 class="page-title">Afspraak Maken</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec ornare turpis, ut congue turpis. Suspendisse placerat, nibh vitae volutpat laoreet, leo ipsum mollis velit, eu pellentesque risus dolor non dolor. Pellentesque vel libero sed dolor imperdiet gravida. Vivamus auctor hendrerit mi sed varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies blandit sem, eget elementum neque finibus et. Phasellus risus neque, mattis eget dolor a, egestas auctor mi.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec ornare turpis, ut congue turpis. Suspendisse placerat, nibh vitae volutpat laoreet, leo ipsum mollis velit, eu pellentesque risus dolor non dolor. Pellentesque vel libero sed dolor imperdiet gravida. Vivamus auctor hendrerit mi sed varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies blandit sem, eget elementum neque finibus et. Phasellus risus neque, mattis eget dolor a, egestas auctor mi.</p>
 
         </article>
 
