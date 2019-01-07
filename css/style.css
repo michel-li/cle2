@@ -162,11 +162,12 @@ article#main-col{
     color:#444444;
     cursor:pointer;
     padding:18px;
-    width:100%;
-    border:none;
+    width:60%;
+    border:5px;
     text-align:left;
     outline:none;
     font-size:15px;
+    border-style:solid;
 }
 
 .active, .collapsible:hover{
@@ -178,6 +179,9 @@ article#main-col{
     display: none;
     overflow: hidden;
     background-color:#f1f1f1;
+    word-wrap: break-word;
+    width:55%;
+
 }
 
 .collapsible:after{

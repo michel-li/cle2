@@ -46,13 +46,18 @@
                 <div class="content">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
-
-                <aside id="sidebar">
-                    <div class="dark">
-                        <h3>Wat wij doen</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec ornare turpis, ut congue turpis. Suspendisse placerat, nibh vitae volutpat laoreet, leo ipsum mollis velit, eu pellentesque risus dolor non dolor. Pellentesque vel libero sed dolor imperdiet gravida. Vivamus auctor hendrerit mi sed varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies blandit sem, eget elementum neque finibus et. Phasellus risus neque, mattis eget dolor a, egestas auctor mi.</p>
-                    </div>
-                </aside>
+                <button class="collapsible">Behandelaar</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.fnmoefneinfjief</p>
+                </div>
+                <button class="collapsible">Datum & Tijd</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.fnoeinf</p>
+                </div>
+                <button class="collapsible">Bevestiging</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.haiudvhoafeljhhhhhhhhhhhefhaioehfehfhoaiehfioehfoihaeiofhoiaehfohefhoaeihfuoheofhaehfoheiofhoiehfiohaeofhiefhoiahefohefoihaoeifhoiaehfohefoieofhoaehfoiaehfoiheoihfohfoehofieoifhoiehfioeahfioahefoihaeiofhoieahfioaehfoiehaoifhaeiofhoiaehfoieahfoiaehfoihafoihaefiohaeiofhoiahfohefoihaeofiheoifhioahfoiahefiohaeofhoiafhoiaehfoehfoihafoihaeofhoiefhoaehf</p>
+                </div>
             </div>
         </section>
 
@@ -60,21 +65,7 @@
             <p>Alexandra's Haarmode, Copyright &copy; 2018</p>
         </footer>
 
-        <script>
-            let coll = document.getElementsByClassName("collapsible");
-            let i;
 
-            for (i = 0; i < coll.length; i++) {
-                coll[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    let content = this.nextElementSibling;
-                    if (content.style.display === "block") {
-                        content.style.display = "none";
-                    } else {
-                        content.style.display = "block";
-                    }
-                });
-            }
-        </script>
     </body>
+    <script src="js/reserveringssysteem.js"></script>
 </html>
