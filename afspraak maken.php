@@ -42,21 +42,26 @@
         <section id="main">
             <div class="container">
                 <h1 class="page-title">Afspraak Maken</h1>
-                <button class="collapsible">Behandeling</button>
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <button class="collapsible">Behandelaar</button>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.fnmoefneinfjief</p>
-                </div>
-                <button class="collapsible">Datum & Tijd</button>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.fnoeinf</p>
-                </div>
-                <button class="collapsible">Bevestiging</button>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.haiudvhoafeljhhhhhhhhhhhefhaioehfehfhoaiehfioehfoihaeiofhoiaehfohefhoaeihfuoheofhaehfoheiofhoiehfiohaeofhiefhoiahefohefoihaoeifhoiaehfohefoieofhoaehfoiaehfoiheoihfohfoehofieoifhoiehfioeahfioahefoihaeiofhoieahfioaehfoiehaoifhaeiofhoiaehfoieahfoiaehfoihafoihaefiohaeiofhoiahfohefoihaeofiheoifhioahfoiahefiohaeofhoiafhoiaehfoehfoihafoihaeofhoiefhoaehf</p>
+                    <form action="" id="afspraak">
+                        <p>Uw keuzes voor dame: </p>
+                        <select name="behandeling" size="4">
+                            <option value="behandeling1">Knippen</option>
+                            <option value="behandeling2">Wassen, Knippen en Drogen</option>
+                            <option value="behandeling3">Wassen, Knippen en Föhnen</option>
+                            <option value="behandeling4">Tondeuse</option>
+                        </select>
+                        <p>Uw keuze voor heer: </p>
+                        <select name="behandeling" size="1">
+                            <option value="behandeling1">Knippen</option>
+                        </select>
+                        <p>Uw keuze voor kind</p>
+                        <select name="behandeling" size="1">
+                            <option value="behandeling1">Knippen</option>
+                        </select>
+                        <p>Voor andere behandelingen bel: 0181-416143</p>
+                        <input type="submit">
+                    </form>
                 </div>
             </div>
         </section>
@@ -64,8 +69,5 @@
         <footer>
             <p>Alexandra's Haarmode, Copyright &copy; 2018</p>
         </footer>
-
-
     </body>
-    <script src="js/reserveringssysteem.js"></script>
 </html>
