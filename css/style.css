@@ -162,11 +162,11 @@ article#main-col{
 }
 
 /* Form */
-form {
+#afspraak form {
     font-size: 20px;
 }
 
-input, select{
+#afspraak input, select{
     font-size: 15px;
     border: none;
     border-bottom: 2px solid orangered;
@@ -175,13 +175,13 @@ input, select{
     display: block;
 }
 
-label{
+#afspraak label{
     display: block;
     font-size: 20px;
     /*margin-left: 35%;*/
 }
 
-.knop_submit{
+#afspraak .submit{
     border: solid;
 }
 

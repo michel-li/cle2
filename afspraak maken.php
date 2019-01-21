@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $behandeling_dame = mysqli_real_escape_string($db, $_POST['behandeling_dame']);
     $behandeling_heer = mysqli_real_escape_string($db, $_POST['behandeling_heer']);
     $behandeling_kind = mysqli_real_escape_string($db, $_POST['behandeling_kind']);
-    $date = mysqli_real_escape_string($db, $_POST['date']);
+    $date_day = mysqli_real_escape_string($db, $_POST['date_day']);
     $time = mysqli_real_escape_string($db, $_POST['time']);
     $email = mysqli_real_escape_string($db, $_POST['email']);
     $phone = mysqli_real_escape_string($db, $_POST['phone']);
@@ -20,15 +20,24 @@ if (isset($_POST['submit'])) {
     if (empty($errors)) {
 
         //Save the record to the database
-        $query = "INSERT INTO alexandras_haarmode (behandeling_dame, behandeling_heer, behandeling_kind, datum, email)
-                  Values ('$behandeling_dame, $behandeling_heer, $behandeling_kind, $datum, $email')";
+        $query =  "INSERT INTO afspraken
+                   (behandeling_dame, behandeling_heer, behandeling_kind, date_day, time, email, phone, agreed)
+                   VALUES ('$behandeling_dame', '$behandeling_heer', '$behandeling_kind', '$date_day', '$time', '$email', '$phone', '$agreed')";
         $result = mysqli_query($db, $query)
         or die('Error: ' . $query);
+
+        if ($result) {
+            header('Location: index.php');
+            exit;
+        } else {
+            $errors[] = 'Something went wrong in your database query: ' . mysqli_error($db);
+        }
+
+        //Close connection
+        mysqli_close($db);
     }
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="nl">
     <head>
@@ -73,29 +82,29 @@ if (isset($_POST['submit'])) {
         <section id="main">
             <div class="container">
                 <div class="content">
-                    <form action="" id="afspraak" method="post">
-                        <label for="behandeling_dame">Uw keuzes voor dame: </label>
+                    <form action="" id="afspraak" method="post" enctype="multipart/form-data">
+                        <label for="behandeling_dame">Uw keuzes voor dame: <span class="errors"><?= isset($errors['behandeling_dame']) ? $errors['behandeling_dame'] : '' ?></span></label>
                             <select name="behandeling_dame" id="behandeling_dame">
                                 <option value="">Kies een optie</option>
                                 <option value="Knippen_dames">Knippen</option>
                                 <option value="Wassen, Knippen en Drogen_dame">Wassen, Knippen en Drogen</option>
-                                <option value="Wassen, Knippen en Föhnen_dame">Wassen, Knippen en Föhnen</option>
+                                <option value="Wassen, Knippen en Fohnen_dame">Wassen, Knippen en Föhnen</option>
                                 <option value="Tondeuse_dame">Tondeuse</option>
                             </select>
-                        <label for="behandeling_heer">Uw keuze voor heer: </label>
+                        <label for="behandeling_heer">Uw keuze voor heer: <span class="errors"><?= isset($errors['behandeling_heer']) ? $errors['behandeling_heer'] : '' ?></span></label>
                             <select name="behandeling_heer" id="behandeling_heer">
                                 <option value="">Kies een optie</option>
                                 <option value="Knippen_heer">Knippen</option>
                             </select>
-                        <label for="behandeling_kind">Uw keuze voor kind: </label>
+                        <label for="behandeling_kind">Uw keuze voor kind: <span class="errors"><?= isset($errors['behandeling_kind']) ? $errors['behandeling_kind'] : '' ?></span></label>
                             <select name="behandeling_kind" id="behandeling_kind">
                                 <option value="">Kies een optie</option>
                                 <option value="Knippen_kind">Knippen</option>
                             </select>
                         <label>Voor andere behandelingen bel: 0181-416143</label>
-                        <label for="date">Datum: </label>
-                        <input type="date" name="afspraak" id="date">
-                        <label for="time">Tijd: </label>
+                        <label for="date_day">Datum: <span class="errors"><?= isset($errors['date_day']) ? $errors['date_day'] : '' ?></span></label>
+                        <input type="date" name="date_day" id="date_day" value="<?= isset($date_day) ? $date_day : '' ?>"/>
+                        <label for="time">Tijd: <span class="errors"><?= isset($errors['time']) ? $errors['time'] : '' ?></span></label>
                             <select name="time" id="time">
                                 <option value="">Kies een tijdsblok</option>
                                 <option value="09:00">09:00</option>
@@ -107,15 +116,15 @@ if (isset($_POST['submit'])) {
                                 <option value="16:00">16:00</option>
                                 <option value="17:00">17:00</option>
                             </select>
-                        <label for="email">Email: </label>
-                        <input type="text" name="email" id="email" placeholder="jan.jansen@gmail.com">
-                        <label for="phone">Telefoonnummer: </label>
-                        <input type="text" name="telefoonnummer" id="phone">
+                        <label for="email">E-mail: <span class="errors"><?= isset($errors['email']) ? $errors['email'] : '' ?></span></label>
+                        <input type="text" name="email" id="email" placeholder="jan.jansen@gmail.com" value"<?= isset($email) ? $email : '' ?>"/>
+                        <label for="phone">Telefoonnummer: <span class="errors"><?= isset($errors['phone']) ? $errors['phone'] : '' ?></span></label>
+                        <input type="text" name="phone" id="phone" value"<?= isset($phone) ? $phone : '' ?>"/>
                         <input type="hidden" name="agreed" value="0">
-                        <label for="agreed">Toestemming gegevensverwerking</label>
+                        <label for="agreed">Toestemming gegevensverwerking <span class="errors"><?= isset($errors['agreed']) ? $errors['agreed'] : '' ?></span></label>
                         <input type="checkbox" name="agreed" value="akkoord" id="agreed">
                         <br>
-                        <input class="knop_submit" type="submit" value="submit">
+                        <input class="submit" type="submit" value="submit" name="submit"/>
                     </form>
                 </div>
             </div>
