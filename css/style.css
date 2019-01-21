@@ -157,12 +157,39 @@ article#main-col{
 }
 
 /* Content */
-
+.content{
+    font-size: 30px;
+}
 
 /* Form */
+form {
+    font-size: 20px;
+}
+
+input, select{
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid orangered;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    display: block;
+}
+
+label{
+    display: block;
+    font-size: 20px;
+    /*margin-left: 35%;*/
+}
+
+.knop_submit{
+    border: solid;
+}
+
 select[name=behandeling]{
     border: none;
     border-bottom: 2px solid orangered;
+    background-color: #f4f4f4;
+    cursor: pointer;
 }
 
 /* Vacature */
