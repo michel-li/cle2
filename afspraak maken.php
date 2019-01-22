@@ -1,4 +1,43 @@
 <?php
+session_start();
+
+//Check if post isset
+if (isset($_SESSION['login'])) {
+    header("view.php");
+    exit;
+}
+
+//If form is posted, lets validate!
+if (isset($_POST['submit'])) {
+    //Retrieve values (email safe for query)
+    $email = mysqli_escape_string($db, $_POST['email']);
+    $password = $_POST['password'];
+    //Get password & name from DB
+    $query = "SELECT id, password FROM users
+              WHERE email = '$email'";
+    $result = mysqli_query($db, $query);
+    $user = mysqli_fetch_assoc($result);
+    //Check if email exists in database
+    $errors = [];
+    if ($user) {
+        //Validate password
+        if (password_verify($password, $user['password'])) {
+            //Set email for later use in Session
+            $_SESSION['login'] = [
+                'name' => $user['name'],
+                'id' => $user['id']
+            ];
+            //Redirect to view.php & exit script
+            header("view.php");
+            exit;
+        } else {
+            $errors[] = 'Uw wachtwoord is onjuist';
+        }
+    } else {
+        $errors[] = 'Uw email komt niet voor in de database';
+    }
+}
+
 if (isset($_POST['submit'])) {
 //Require database in this file
     require_once "includes/database.php";
@@ -88,7 +127,7 @@ if (isset($_POST['submit'])) {
                                 <option value="">Kies een optie</option>
                                 <option value="Knippen_dames">Knippen</option>
                                 <option value="Wassen, Knippen en Drogen_dame">Wassen, Knippen en Drogen</option>
-                                <option value="Wassen, Knippen en Fohnen_dame">Wassen, Knippen en Föhnen</option>
+                                <option value="Wassen, Knippen en Föhnen_dame">Wassen, Knippen en Föhnen</option>
                                 <option value="Tondeuse_dame">Tondeuse</option>
                             </select>
                         <label for="behandeling_heer">Uw keuze voor heer: <span class="errors"><?= isset($errors['behandeling_heer']) ? $errors['behandeling_heer'] : '' ?></span></label>
@@ -127,6 +166,23 @@ if (isset($_POST['submit'])) {
                         <input class="submit" type="submit" value="submit" name="submit"/>
                     </form>
                 </div>
+
+                <aside id="sidebar">
+                    <div class="dark">
+                        <h3>Afspraken zien</h3>
+                        <form class="form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                            <label for="email" >E-mail: </label><br>
+                            <input type="email" id="email" name="email" value="<?= isset($email) ? $email : '' ?>"> <br>
+
+                            <label for="firstname">Wachtwoord:</label> <br>
+                            <input type="password" id="password" name="password" value="<?= isset($firstname) ? $firstname : '' ?>"> <br>
+
+                            <div class="data-submit">
+                                <input id ="sendButton" type="submit" name="submit" value="Log in"/>
+                            </div>
+                        </form>
+                    </div>
+                </aside>
             </div>
         </section>
 

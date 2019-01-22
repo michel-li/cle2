@@ -159,6 +159,8 @@ article#main-col{
 /* Content */
 .content{
     font-size: 30px;
+    float: left;
+    width: 65%;
 }
 
 /* Form */
@@ -183,6 +185,8 @@ article#main-col{
 
 #afspraak .submit{
     border: solid;
+    color: #ffffff;
+    background-color: #35424a;
 }
 
 select[name=behandeling]{
@@ -190,6 +194,23 @@ select[name=behandeling]{
     border-bottom: 2px solid orangered;
     background-color: #f4f4f4;
     cursor: pointer;
+}
+
+/* Table */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
 }
 
 /* Vacature */
@@ -248,6 +269,17 @@ footer{
     #newsletter form input[type="email"], .extra input, .extra textarea{
         width:100%;
         margin-bottom:5px;
+    }
+
+    #afspraak input,
+    #afspraak select,
+    .content{
+        width: 100%;
+        float: none;
+    }
+
+    #afspraak .submit{
+        float: none;
     }
 }
 
