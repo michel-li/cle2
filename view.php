@@ -1,4 +1,12 @@
 <?php
+session_start();
+
+//May I even visit this page
+if (!isset($_SESSION['login'])) {
+    header('Location: index.php');
+    exit;
+}
+
 require_once "includes/database.php";
 
 $query = "SELECT * FROM afspraken ORDER BY date_day, time ASC";
@@ -74,6 +82,9 @@ mysqli_close($db);
                     <?php } ?>
                 </tbody>
             </table>
+        </div>
+        <div>
+            <button><a href="logout.php">Uitloggen</a></button>
         </div>
         <footer>
             <p>Alexandra's Haarmode, Copyright &copy; 2018</p>
