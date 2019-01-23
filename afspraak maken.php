@@ -132,8 +132,6 @@ if (isset($_POST['submit'])) {
                     <div class="dark">
                         <h3>Afspraken zien</h3>
                         <button><a href="login.php">Inloggen</a></button>
-                        <button><a href="addAdmin.php">voeg een admin toe</a></button>
-                        <button><a href="view.php">view de afspraken</a></button>
                     </div>
                 </aside>
             </div>
