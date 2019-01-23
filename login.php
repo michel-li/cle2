@@ -16,10 +16,11 @@ if (isset($_POST['submit'])) {
     $email = mysqli_escape_string($db, $_POST['email']);
     $password = $_POST['password'];
     //Get password & name from DB
-    $query = "SELECT id, password FROM users
+    $query = "SELECT id, password, email FROM users
               WHERE email = '$email'";
     $result = mysqli_query($db, $query);
     $user = mysqli_fetch_assoc($result);
+
     //Check if email exists in database
     $errors = [];
     if ($user) {
@@ -27,11 +28,11 @@ if (isset($_POST['submit'])) {
         if (password_verify($password, $user['password'])) {
             //Set email for later use in Session
             $_SESSION['login'] = [
-                'name' => $user['name'],
+                'email' => $user['email'] ,
                 'id' => $user['id']
             ];
             //Redirect to view.php & exit script
-            header("view.php");
+            header("Location:view.php");
             exit;
         } else {
             $errors[] = 'Uw wachtwoord is onjuist';
